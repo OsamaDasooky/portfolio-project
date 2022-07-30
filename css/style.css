@@ -67,6 +67,7 @@ div > .main-heading::after {
 }
 /* end Global Rules */
 .background {
+    background-attachment:fixed;
     background-image: url(../img//computer-programming.jpg);
     background-size: cover;
     height: 100vh;
@@ -272,7 +273,6 @@ header .nav ul .active::before {
     background-color: black;
 }
 .About .text {
-    width: 400px;
     padding: 10px;
     align-self: center;
 }
@@ -340,6 +340,11 @@ header .nav ul .active::before {
     overflow: hidden;
     transition: 0.5s;
 }
+@media (min-width:768px) and (max-width:991px) {
+    .Service .serv {
+        max-width: 320px
+    }
+}
 .Service .serv svg {
     font-size: 40px;
     position: relative;
@@ -387,6 +392,7 @@ header .nav ul .active::before {
     position: relative;
     bottom: -150px;
     transition: 0.5s;
+    padding: 0 6px;
 }
 .Service .serv .serv-text{
     position: relative;
@@ -413,3 +419,92 @@ header .nav ul .active::before {
     transition-delay: 0.6s;
 }
 /* end Service  */
+/* start Project  */
+.row>* {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.Project {
+    padding: 60px 0;
+}
+.Project .proj {
+    text-align: center;
+    height: 300px;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    box-shadow: -1px 3px 10px rgb(0 0 0 / 20%);
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:768px) and (max-width:991px) {
+    .Project .proj {
+        max-width: 320px
+    }
+}
+.Project .proj:hover {
+    box-shadow: -1px 3px 10px rgb(0 0 0 / 20%), -1px 3px 15px rgb(0 0 0 / 25%);
+    transform: translateY(-20px);
+    height: 350px;
+
+}
+.Project .proj .image {
+height: 220px;
+position: relative;
+}
+.Project .proj img {
+    width: 100%;
+    height: 100%;
+}
+.Project .image .link:first-of-type {
+position: absolute;
+top: 15px; 
+right: -35px;
+transition: 0.5s;
+align-items: center;
+}
+.Project .image .link:nth-of-type(2) {
+position: absolute;
+top: 65px; 
+right: -35px;
+transition: 0.5s;
+}
+.Project .proj:hover .image .link:first-of-type,
+.Project .proj:hover .image .link:nth-of-type(2) {
+    right: 10px;
+}
+.Project .image .link svg {
+    font-size: 20px;
+    color: var(--main-color);
+}
+.Project .proj .proj-text {
+    padding: 0 10px;
+    text-align: left;
+    height: 80px;
+}
+.Project .proj .proj-text h3 {
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.Project .proj .proj-text span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.Project .proj .proj-text p {
+    color: #777;
+    position: relative;
+    bottom: -50px;
+    transition: 0.5s;
+}
+.Project .proj:hover .proj-text p {
+    bottom: 5px;
+}
+
+/* end Project  */

@@ -159,6 +159,11 @@ header .nav ul .active::before {
     height:calc(100vh - 60px);
     position: relative;
 }
+@media (max-width: 768px) {
+    .landing {
+        height:calc(100vh - 120px);
+    }
+}
 .landing .text {
     position: absolute;
     top: 50%;
@@ -328,6 +333,91 @@ header .nav ul .active::before {
     
 }
 /* end about  */
+/* start skills */
+.skills {
+    padding: 50px 0;
+}
+.skills .skill-bar {
+    padding: 10px;
+}
+.skills .skill-bar .info {
+    margin: 10px 0;
+}
+.skills .skill-bar .info:first-child {
+    margin-top: 0;
+}
+.skills .skill-bar .info span {
+    text-transform: uppercase;
+    font-size: 17px;
+}
+@media (max-width:767px) {
+    .skills .skill-bar .info span {
+        font-size: 14px;
+    }
+}
+.skills .skill-bar .progress-line {
+    height: 15px;
+    width: 100%;
+    background-color: #e9e9e9;
+    box-shadow: inset 0px 0px 2px rgb(4 4 4 / 5%) , 0px 1px 5px rgb(4 4 4 / 5%);
+    border-radius: 5px;
+    position: relative;
+}
+.skills .skill-bar .progress-line span {
+    position: absolute;
+    height: 100%;
+    background :linear-gradient(30deg, rgb(204 0 0) , rgba(204, 0, 0, 0.7) , rgba(204, 0, 0, 0.3));
+    border-radius: 5px;
+    animation: skill-bar 2s linear;
+}
+.skills .skill-bar .progress-line span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -6px;
+    right: -5px;
+    border: 7px solid;
+    border-color:black transparent transparent ;
+}
+.skills .skill-bar .progress-line span::after {
+    position: absolute;
+    width: 28px;
+    height: 14px;
+    top: -20px;
+    right: -20px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    padding: 1px;
+
+}
+.skills .skill-bar .progress-line.html span::after {
+    content: "80%";
+}
+.skills .progress-line.css span::after {
+    content: "70%";
+}
+.skills .progress-line.js span::after {
+    content: "25%";
+}
+.skills .progress-line.html span {
+    width: 80%;
+}
+.skills .progress-line.css span {
+    width: 60%;
+}
+.skills .progress-line.js span {
+    width: 25%;
+}
+@keyframes skill-bar {
+    from {
+        width: 0;
+    }
+}
+/* end skills */
 /* start Service  */
 .Service {
     padding: 60px 0;

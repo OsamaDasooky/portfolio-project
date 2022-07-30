@@ -50,18 +50,18 @@ ul {
 div > .main-heading {
     text-align: center;
     font-size: 40px ;
-    padding: 30px 0;
     margin-bottom: 50px;
+    padding-bottom: 20px;
     font-weight: 400;
     position: relative;
 }
 div > .main-heading::after {
     content: "";
     position: absolute;
-    bottom: 10px;
+    bottom: 00px;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
+    width: 100px;
     height: 3px;
     background-color: var(--main-color);
 }
@@ -86,6 +86,11 @@ div > .main-heading::after {
 header {
     height: 60px;   
     align-items: center;
+}
+@media (max-width:991px) {
+    header {
+        height: 120px;
+    }
 }
 header .container {
     display: flex;
@@ -342,7 +347,17 @@ header .nav ul .active::before {
 }
 @media (min-width:768px) and (max-width:991px) {
     .Service .serv {
-        max-width: 320px
+        max-width: 340px
+    }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    .Service .serv {
+        max-width: 300px
+    }
+}
+@media (min-width:1200px) {
+    .Service .serv {
+        max-width: 350px
     }
 }
 .Service .serv svg {
@@ -426,6 +441,12 @@ header .nav ul .active::before {
 }
 .Project {
     padding: 60px 0;
+    height: 90vh; 
+}
+@media (max-width:767px) {
+    .Project {
+        height: 900px;
+    }
 }
 .Project .proj {
     text-align: center;
@@ -443,10 +464,13 @@ header .nav ul .active::before {
     .Project .proj {
         max-width: 320px
     }
+    .Project {
+        height: 90vh; 
+    }
 }
 .Project .proj:hover {
     box-shadow: -1px 3px 10px rgb(0 0 0 / 20%), -1px 3px 15px rgb(0 0 0 / 25%);
-    transform: translateY(-20px);
+    transform: translateY(-30px);
     height: 350px;
 
 }
@@ -489,13 +513,20 @@ transition: 0.5s;
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 500;
+    margin-top: 30px;
+    transition:  0.5s ;
+}
+.Project .proj:hover .proj-text h3 {
     margin-top: 15px;
 }
 .Project .proj .proj-text span {
     color: rgba(0, 0, 0, 0.7);
     font-size: 10px;
-    display: inline-block;
     margin-bottom: 15px;
+    display: block;
+    text-align: end;
+    position: relative;
+    top: -18px;
 }
 .Project .proj .proj-text p {
     color: #777;
@@ -508,3 +539,49 @@ transition: 0.5s;
 }
 
 /* end Project  */
+/* start footer  */
+footer {
+    height: 80px;
+    background-color: black;
+}
+footer .container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p {
+    color: white;
+}
+footer p span {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 600;
+}
+footer p span span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+footer div svg {
+    padding: 10px;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: white;
+}
+footer div svg:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: var(--main-color);
+}
+@media (max-width:767px) {
+    footer .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer {
+        height: 100px;
+    }
+}
+/* end footer  */

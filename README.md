@@ -4,4 +4,5 @@
 [live demo link](https://osamadasooky.github.io/portfolio-project/) 
 --
 ![wireframe](https://user-images.githubusercontent.com/108807379/181943177-d4ffdced-c22d-4e2f-8ac3-2eead0bff89a.png)
-![mockup](https://user-images.githubusercontent.com/108807379/181943298-36674851-1d70-4292-ab60-1214da689e80.png)
+
+![mockup](https://user-images.githubusercontent.com/108807379/182014901-15fce998-34c5-4cf8-a00d-459e04579570.png)

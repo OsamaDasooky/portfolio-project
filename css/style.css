@@ -319,6 +319,9 @@ header .nav ul .active::before {
     .About .image img{
         width: 80%;
     }
+    .About .row {
+        justify-content: right !important;
+    }
 }
 .About .card {
     display: flex;

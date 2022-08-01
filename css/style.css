@@ -46,7 +46,6 @@ ul {
         width: 1170px;
     }
 }
-
 div > .main-heading {
     text-align: center;
     font-size: 40px ;
@@ -72,32 +71,20 @@ div > .main-heading::after {
     height: 3px;
     background-color: var(--main-color);
 }
-
 /* end Global Rules */
-.background {
-    background-attachment:fixed;
-    background-image: url(../img//computer-programming.jpg);
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-}
-.background::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 /* start header  */
 header {
     height: 60px;   
     align-items: center;
+    position: sticky;
+    top: -2px;
+    left: 0;
+    z-index: 110;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 @media (max-width:991px) {
     header {
-        height: 120px;
+        height: 100px;
     }
 }
 header .container {
@@ -131,14 +118,20 @@ header .nav ul {
 }
 header .nav ul li {
     padding: 10px;
+    margin-right: 10px;
 }
 header .nav ul li a{
     color: white;
 }
 header .nav ul li{
     position: relative;
+    transition: 0.5s;
+    border-radius: 15px;
 }
-header .nav ul .active::before {
+header .nav ul li:hover {
+    background-color: var(--main-color);
+}
+/* header .nav ul .active::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -146,13 +139,13 @@ header .nav ul .active::before {
     left: 0;
     background-color: var(--main-color);
     height: 3px;
-}
+} */
 @media (max-width:767px) {
     header .container {
         flex-wrap: wrap;
         justify-content: center;
         padding: 10px;
-        height: 120px;
+        height: 100px;
         font-size: 14px;
     } 
     header .logo {
@@ -166,10 +159,26 @@ header .nav ul .active::before {
 .landing {
     height:calc(100vh - 60px);
     position: relative;
+    background-attachment:fixed;
+    background-image: url(../img//computer-programming.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    top:-60px
 }
-@media (max-width: 768px) {
+.landing::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+@media (max-width:991px) {
     .landing {
-        height:calc(100vh - 120px);
+        top: -100px;
     }
 }
 .landing .text {
@@ -178,6 +187,7 @@ header .nav ul .active::before {
     left: 50%;
     transform: translate(-50% , -50%);
     text-align: center;
+    z-index: 1;
 }
 .landing .text h3 {
     font-family: 'Lexend Zetta', sans-serif;
@@ -216,6 +226,11 @@ header .nav ul .active::before {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction:alternate-reverse;
+}
+@media (min-width:520px) and (max-width:950px) {
+    .landing .text p span:last-child::after{
+        right: -50px;
+    }
 }
 
 @keyframes change-color {

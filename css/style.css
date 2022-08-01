@@ -353,12 +353,10 @@ header .nav ul .active::before {
     width: 100%;
 }
 .skills .skills-box .row .soft {
-    /* height: 200px; */
     position: relative;
     transition: 0.5s;
 }
 .skills .skills-box .row .technical {
-    /* height: 200px; */
     position: relative;
     transition: 0.5s;
 }
@@ -367,6 +365,7 @@ header .nav ul .active::before {
     padding: 10px;
     margin: 20px;
     text-transform: capitalize;
+    font-size: 20px;
 }
 .skills .skills-box .row p {
     padding: 10px 25px ;
@@ -375,9 +374,6 @@ header .nav ul .active::before {
     border-radius: 10px;
     box-shadow: -1px 3px 10px rgb(0 0 0 / 20%);
     transition: 0.5s;
-}
-.skills .skills-box .row p:hover {
-
 }
 .skills .skills-box .row .soft p:nth-of-type(even) {
     background-color: #e9e9e9;

@@ -572,7 +572,7 @@ align-items: center;
 }
 .Project .image .link:nth-of-type(2) {
 position: absolute;
-top: 65px; 
+top: 70px; 
 right: -35px;
 transition: 0.5s;
 }
@@ -581,7 +581,7 @@ transition: 0.5s;
     right: 10px;
 }
 .Project .image .link svg {
-    font-size: 20px;
+    font-size: 25px;
     color: var(--main-color);
 }
 .Project .proj .proj-text {
@@ -596,6 +596,7 @@ transition: 0.5s;
     font-weight: 500;
     margin-top: 30px;
     transition:  0.5s ;
+    order: 4;
 }
 .Project .proj:hover .proj-text h3 {
     margin-top: 15px;
